@@ -173,6 +173,13 @@ const task_insert = async function (taskDescription, taskTimestamp, statusId, us
 }
 
 
+const task_delete = async function (taskId, userId) {
+    const data = await pool.promise()
+    .query(taskQueries.query_task_delete(taskId, userId))
+    .catch( (error) => {
+        throw error
+    })
+}
 
 
-export { task_by_userId, task_update, task_insert, task_by_userId_stream }
+export { task_by_userId, task_update, task_insert, task_by_userId_stream, task_delete }

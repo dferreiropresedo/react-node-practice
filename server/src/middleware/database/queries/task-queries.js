@@ -35,4 +35,10 @@ const query_task_update = function(id, description, date, timestamp, statusId, u
     `
 }
 
-export { query_task_by_user_and_task_id as query_task_by_id, query_task_by_userId,  query_task_insert, query_task_update }
+const query_task_delete = function(taskId, userId) {
+    return `
+        DELETE FROM task WHERE id=${escape(taskId)} AND user_id=${escape(userId)};
+    `
+}
+
+export { query_task_by_user_and_task_id as query_task_by_id, query_task_by_userId,  query_task_insert, query_task_update, query_task_delete }
