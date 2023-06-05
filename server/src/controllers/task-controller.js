@@ -45,4 +45,16 @@ const add_task = function (request, response, next) {
         })
 }
 
-export { update_task, user_tasks, add_task }
+const remove_task = function(request, response, next) {
+    const user = response.locals.userData
+    const taskId = request.params.id
+    TaskService.task_delete(taskId, user.id)
+    .then(() => {
+        response.send()
+    })
+    .catch( (error) => {
+        response.status(500).send({ error: "There was not possible to execute that operation", msg: error})
+    })
+}
+
+export { update_task, user_tasks, add_task, remove_task}
