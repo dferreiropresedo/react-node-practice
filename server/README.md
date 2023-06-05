@@ -8,7 +8,6 @@ This is a server developed using the following technologies:
 * [Express](https://expressjs.com/) v4.18.2
 * [mysql2](https://github.com/sidorares/node-mysql2) v3.3.3
 
----
 
 ## Booting up
 
@@ -29,6 +28,7 @@ const _pool = createPool({
 
 Even though the credentials are stored here on clear text, they should be enmasked using [DotEnv](https://github.com/motdotla/dotenv), but for the sake of simplicity, they were declared in clear text.
 
+---
 
 ### Server boot-up
 
@@ -39,7 +39,6 @@ npm install
 npm start
 ```
 
----
 
 ## Features
 
@@ -54,7 +53,6 @@ npm start
   * List all the tasks from the user
   * Remove a task from the user (WIP)
 
----
 
 ## Code highlights
 
@@ -75,6 +73,7 @@ This code can be found on line [TaskService:149](https://github.com/dferreiropre
 
 We can observe that a pool of connections is used here so as to be more efficient at time of managing the connections to the DataSource. Furthermore, we are making use of the promises so as to free the thread while we are waiting for the query to be completed.
 
+---
 
 ### Streaming processal of database information
 
