@@ -1,12 +1,22 @@
 import React, { ReactNode } from "react";
-import { SCColumnContainer } from "./columnComponents";
+import {
+  SCColumnTaskContainer,
+  SCColumn,
+  SCColumnTitle,
+} from "./columnComponents";
 
 interface ColumnProps {
+  columnTitle: string;
   children: ReactNode;
 }
 
-function Column({ children }: ColumnProps) {
-  return <SCColumnContainer>{children}</SCColumnContainer>;
+function Column({ columnTitle, children }: ColumnProps) {
+  return (
+    <SCColumn>
+      <SCColumnTitle variant="h6">{columnTitle}</SCColumnTitle>
+      <SCColumnTaskContainer>{children}</SCColumnTaskContainer>
+    </SCColumn>
+  );
 }
 
 export default Column;
