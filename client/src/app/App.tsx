@@ -1,6 +1,5 @@
 import Task from "../components/task/Task";
 import Column from "../components/column/Column";
-import { Key } from "react";
 
 function App() {
   const data = [
@@ -8,6 +7,12 @@ function App() {
     { id: 2, timestamp: 1686410263, title: "Do other things", postponed: 1 },
     { id: 3, timestamp: 1686410263, title: "Buy another", postponed: 3 },
     { id: 4, timestamp: 1686410263, title: "Check other", postponed: 0 },
+    { id: 5, timestamp: 1686410263, title: "Check other", postponed: 0 },
+    { id: 6, timestamp: 1686410263, title: "Check other", postponed: 0 },
+    { id: 7, timestamp: 1686410263, title: "Check other", postponed: 0 },
+    { id: 8, timestamp: 1686410263, title: "Check other", postponed: 0 },
+    { id: 9, timestamp: 1686410263, title: "Check other", postponed: 0 },
+    { id: 10, timestamp: 1686410263, title: "Check other", postponed: 0 },
   ];
 
   const mapToTask = function (taskData: {

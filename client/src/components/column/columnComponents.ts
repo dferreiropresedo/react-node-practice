@@ -1,4 +1,4 @@
-import { Stack, Typography, styled } from "@mui/material";
+import { Stack, Typography, styled, Button } from "@mui/material";
 
 
 const SCColumn = styled(Stack)({
@@ -23,9 +23,12 @@ const SCColumnTaskContainer = styled(Stack)({
     alignItems: 'center',
     gap: '14px',
     width: '100%',
+    minHeight: '100%',
     backgroundColor: 'rgb(230,230,230,1)',
     borderRadius: '4px',
-    paddingTop: '12px'
+    paddingTop: '12px',
+    paddingBottom: '8px',
+    overflowX: 'auto',
 });
 
 const SCColumnTitle = styled(Typography)({
@@ -37,4 +40,15 @@ const SCColumnTitle = styled(Typography)({
     fontWeight: 'bold'
 });
 
-export { SCColumnTaskContainer, SCColumn, SCColumnTitle }
+const SCAddTaskButton = styled(Button)({
+    color: 'rgb(0,0,0,0.5)',
+    width: '90%',
+    textTransform: 'none',
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    fontWeight: '600',
+    marginTop: 'auto'
+})
+
+export { SCColumnTaskContainer, SCColumn, SCColumnTitle, SCAddTaskButton }

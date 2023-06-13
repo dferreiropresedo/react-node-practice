@@ -3,7 +3,9 @@ import {
   SCColumnTaskContainer,
   SCColumn,
   SCColumnTitle,
+  SCAddTaskButton,
 } from "./columnComponents";
+import AddIcon from "@mui/icons-material/Add";
 
 interface ColumnProps {
   columnTitle: string;
@@ -14,7 +16,12 @@ function Column({ columnTitle, children }: ColumnProps) {
   return (
     <SCColumn>
       <SCColumnTitle variant="h6">{columnTitle}</SCColumnTitle>
-      <SCColumnTaskContainer>{children}</SCColumnTaskContainer>
+      <SCColumnTaskContainer>
+        {children}
+        <SCAddTaskButton size="large" startIcon={<AddIcon />}>
+          Add a card
+        </SCAddTaskButton>
+      </SCColumnTaskContainer>
     </SCColumn>
   );
 }
