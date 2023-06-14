@@ -2,7 +2,7 @@ import { Stack, styled } from "@mui/material";
 
 
 const SCTaskContainer = styled(Stack)({
-    width: "80%",
+    width: "83%",
     backgroundColor: 'rgb(255,255,255,1)',
     color: 'rgb(128,128,128)',
     borderRadius: '12px',

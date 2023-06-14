@@ -9,11 +9,11 @@ const SCColumn = styled(Stack)({
     gap: '10px',
     backgroundColor: 'rgb(230,230,230,1)',
     minWidth: '400px',
-    width: '25%',
-    height: '90%',
-    borderRadius: '4px',
-    margin: 'auto',
-    paddingTop: '12px'
+    maxHeight: '98%',
+    width: '15%',
+    borderRadius: '12px',
+    marginLeft: '6px',
+    marginTop: '6px'
 });
 
 const SCColumnTaskContainer = styled(Stack)({
@@ -25,7 +25,7 @@ const SCColumnTaskContainer = styled(Stack)({
     width: '100%',
     minHeight: '100%',
     backgroundColor: 'rgb(230,230,230,1)',
-    borderRadius: '4px',
+    borderRadius: '12px',
     paddingTop: '12px',
     paddingBottom: '8px',
     overflowX: 'auto',
@@ -37,7 +37,8 @@ const SCColumnTitle = styled(Typography)({
     marginLeft: 'auto',
     marginRight: 'auto',
     paddingRight: '12px',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    paddingTop: '12px'
 });
 
 const SCAddTaskButton = styled(Button)({
@@ -48,7 +49,7 @@ const SCAddTaskButton = styled(Button)({
     alignItems: 'center',
     justifyContent: 'flex-start',
     fontWeight: '600',
-    marginTop: 'auto'
+    borderRadius: '12px'
 })
 
 export { SCColumnTaskContainer, SCColumn, SCColumnTitle, SCAddTaskButton }
